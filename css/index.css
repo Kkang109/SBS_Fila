@@ -1,0 +1,176 @@
+.coupon_info_container{
+    position: fixed;
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    font-size: var(--font-label-lg-size);
+    line-height: 30px;
+    background-color: var(--color-error-container);
+    z-index: 99;
+}
+.coupon_info_container > button{
+    position: absolute;
+    right: 20px;
+    line-height: 30px;
+    background: unset;
+    border: none;
+    color: var(--color-on-secondary-container);
+}
+/***********************************************************/
+header{
+    position: absolute;
+    width: 100vw;
+    top: 30px;
+    background-color: grey;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 48px;
+}
+
+header > .home_btn > img{
+    width: 55px;
+    height: 55px;
+}
+
+header > .main_menu{
+    display: flex;
+}
+
+header > .main_menu > li{
+    padding: 4px 12px;
+    cursor: pointer;
+    /*background-color: black;*/
+}
+header > .main_menu > li > a{
+    text-decoration: none; /*underline 제거*/
+    color: var(--color-on-primary);
+    font-size: var(--font-body-lg-size);
+    font-weight: 500;
+    line-height: var(--font-body-lg-line-height);
+    letter-spacing: var(--font-body-lg-letter-spacing);
+    padding: 4px 0;
+    /* 마우스 올렸을 시 */
+    &:hover{
+        border-bottom: 2px solid var(--color-on-primary)
+    }
+}
+
+header > nav > ul{
+    display: flex;
+}
+
+header > nav li{
+    padding: 4px 8px;
+}
+
+header > nav a{
+    text-decoration: none; /*underline 제거*/
+    color: var(--color-on-primary);
+    font-size: var(--font-body-lg-size);
+    font-weight: var(--font-body-lg-weight);
+    line-height: var(--font-body-lg-line-height);
+    letter-spacing: var(--font-body-lg-letter-spacing);
+    padding: 4px 0;
+}
+/****************************************************/
+
+main > .hero_section > video{
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+/************************************************/
+
+main > .trending_section{
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.trending_section > h2{
+    font-size: var(--font-headline-lg-size);
+    font-weight: var(--font-headline-lg-weight);
+    line-height: var(--font-headline-lg-line-height);
+    letter-spacing: var(--font-headline-lg-letter-spacing);
+}
+
+.trending_section > div{
+    display: flex;
+    justify-content: space-between;
+}
+.trending_section > div > ul{
+    display: flex;
+    gap: 16px;
+}
+.trending_section button{
+    font-size: var(--font-body-lg-size);
+    line-height: var(--font-body-lg-line-height);
+    background: unset;
+    border: none;
+    color: var(--color-on-background);
+}
+.trending_section .arrow_button{
+    width: 80px;
+    border: 1px solid var(--color-outline);
+    color: var(--color-on-background);
+    border-radius: 16px;
+    padding: 4px 8px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: var(--color-surface-container-high);
+    }
+}
+
+.trending_section > ul{
+    display: flex;
+}
+.trending_section > ul > li{
+    width: 400px;
+}
+.trending_section > ul > li > a{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-decoration: none;
+    color: var(--color-on-background);
+}
+.trending_section .image_container > img{
+    width: 100%;
+}
+
+.trending_section .tag{
+    font-size: var(--font-label-sm-size);
+    line-height: var(--font-label-sm-line-height);
+    color: var(--color-on-background);
+    padding: 4px 8px;
+    border-radius: 16px;
+}
+.trending_section .title{
+    font-size: var(--font-body-lg-size);
+    font-weight: var(--font-body-lg-weight);
+}
+.trending_section .price{}
+
+
+
+
+
+
+
+/************************************************/
+
+main .image_section1{
+    display: flex;
+}
+main .image_section1 img{
+    width: 100%;
+}
+main .image_section1 img:first-child{
+    margin-right: 8px;
+}
+
+
+
