@@ -1,0 +1,354 @@
+#item_list{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+}
+/****************************************************/
+.coupon_info_container{
+    position: fixed;
+    width: 100%;
+    height: 45px;
+    text-align: center;
+    font-size: var(--font-label-lg-size);
+    font-weight: var(--font-label-lg-weight);
+    line-height: 45px;
+    background-color: blue;
+    color: white;
+    z-index: 99;
+}
+.coupon_info_container > button{
+    position: absolute;
+    right: 20px;
+    line-height: 45px;
+    background: unset;
+    border: none;
+    color: white;
+}
+/***********************************************************/
+header{
+    position: absolute;
+    width: 100%;
+    top: 45px;
+    /*background-color: grey;*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 48px;
+}
+
+header > .home_btn > img{
+    width: 55px;
+    height: 55px;
+}
+
+header > .main_menu{
+    display: flex;
+}
+
+header > .main_menu > li{
+    padding: 4px 12px;
+    cursor: pointer;
+    /*background-color: black;*/
+}
+header > .main_menu > li > a{
+    text-decoration: none; /*underline 제거*/
+    color: black;
+    font-size: var(--font-body-lg-size);
+    font-weight: 500;
+    line-height: var(--font-body-lg-line-height);
+    letter-spacing: var(--font-body-lg-letter-spacing);
+    padding: 4px 0;
+    /* 마우스 올렸을 시 */
+    &:hover{
+        border-bottom: 2px solid black;
+    }
+}
+
+header > nav > ul{
+    display: flex;
+}
+
+header > nav li{
+    padding: 4px 8px;
+}
+
+header > nav a{
+    text-decoration: none; /*underline 제거*/
+    color: black;
+    font-size: var(--font-body-lg-size);
+    font-weight: var(--font-body-lg-weight);
+    line-height: var(--font-body-lg-line-height);
+    letter-spacing: var(--font-body-lg-letter-spacing);
+    padding: 4px 0;
+}
+/****************************************************/
+
+#item_list main{
+    position: absolute;
+    width: 100%;
+    top: 200px;
+}
+
+/**********************/
+main > #sub_title{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 16px 48px;
+    margin-bottom: 32px;
+
+}
+main > #sub_title > div{
+    display: flex;
+    gap: 12px;
+}
+main > #sub_title h1{
+    font-size: 52px;
+}
+main > #sub_title > div span{
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 80px;
+}
+/**********************/
+#sub_title > ul{
+    display: flex;
+    gap: 24px;
+}
+#sub_title > ul > li > a{
+    text-decoration: none;
+    color: #b6b6b6;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: var(--font-body-lg-line-height);
+    letter-spacing: var(--font-body-lg-letter-spacing);
+}
+
+/****************************************************/
+
+main #list_up{
+    display: flex;
+    flex-direction: column;
+    gap: 20px 24px;
+    padding: 0 48px;
+    margin-bottom: 80px;
+}
+
+/***************************/
+
+#list_up .filter{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    gap: 12px;
+    align-items: center;
+}
+#list_up .filter .filter_btn{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: none;
+
+    font-size: 15px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+#list_up .filter .filter_select{
+    position: relative;
+    cursor: pointer;
+
+    border-radius: 50px;
+    border: 1px solid black;
+    font-size: 15px;
+    background-color: white;
+
+    display: flex;
+    align-items: center;
+}
+#list_up .filter select{
+    width: 100%;
+    height: 100%; /* 높이도 부모를 꽉 채우도록 */
+    cursor: pointer;
+
+    padding: 10px 40px 10px 20px;
+    font-size: 15px;
+
+    background-color: transparent;
+    appearance: none;
+    border: none;
+    outline: none;
+}
+.filter_select i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+/***************************/
+#list_up .list{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+/***************************/
+
+main #list_up .list_card{
+    position: relative;
+    margin-bottom: 40px;
+
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+}
+.list_card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+#list_up .list_card ul{
+    display: flex;
+    gap: 8px;
+    width: 50%;
+}
+
+#list_up .list_card .card_info{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+#list_up .list_card .card_info > span p{
+    font-size: 14px;
+}
+#list_up .list_card .card_info > span h2{
+    font-weight: 600;
+    font-size: 20px;
+}
+#list_up .list_card .card_info > b {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+/***************************/
+
+#list_up .img_hover{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    pointer-events: none;
+
+}
+#list_up  .img_hover .hover_head{
+    opacity: 0;
+}
+
+#list_up .list_card .img_hover .hover_body{
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    width: 90%;
+
+    transform: translateY(100%);
+    transition: transform 0.4s ease-in-out;
+    pointer-events: auto;
+
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.65);
+    padding: 20px;
+    gap: 12px;
+    text-align: center;
+    border-radius: 5px;
+}
+#list_up .list_card .img_hover .card_head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    color: white;
+    font-size: 20px;
+}
+#list_up .list_card .img_hover .card_size{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+}
+#list_up .list_card .img_hover .card_size .size{
+    background-color: unset;
+    border: unset;
+    padding: 4px 8px;
+    border-radius: 50px;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#list_up .list_card:hover .hover_head {
+    opacity: 1;
+}
+
+#list_up .list_card:hover .hover_body {
+    transform: translateY(-10%);
+}
+
+
+/****************************************************/
+
+#item_list main #page{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    padding: 20px 0;
+}
+#page .page_btn{
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+#page .page_list{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    list-style: none;
+}
+#page .page_list li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 8px 20px;
+    border-radius: 50px;
+    background-color: unset;
+    color: black;
+    font-size: 15px;
+    cursor: pointer;
+    &:nth-child(6){
+        cursor: unset;
+    }
+    &:not(:nth-child(6)):hover{
+        background-color: black;
+        color: white;
+    }
+}
+#page .page_list li a{
+    text-decoration: none;
+    color: inherit;
+}
+#page .page_btn > a > i{
+    font-size: 9px;
+}

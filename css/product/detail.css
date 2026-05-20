@@ -53,6 +53,9 @@
 #main .information{
     width: 60%;
 }
+#main .information strong{
+    font-size: var(--font-body-lg-size);
+}
 #main .information .header{
     display: flex;
     justify-content: space-between;
