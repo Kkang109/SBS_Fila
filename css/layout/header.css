@@ -1,0 +1,140 @@
+body{
+    background-color: black;
+}
+#mainpage{
+    position: relative;
+}
+
+.coupon_info_container{
+    position: fixed;
+    width: 100%;
+    height: 45px;
+    text-align: center;
+    font-size: var(--font-label-lg-size);
+    font-weight: var(--font-label-lg-weight);
+    line-height: 45px;
+    background-color: blue;
+    color: white;
+    z-index: 99;
+}
+
+.coupon_info_container > button{
+    position: absolute;
+    right: 20px;
+    line-height: 45px;
+    background: unset;
+    border: none;
+    color: white;
+}
+
+/***********************************/
+
+header{
+    background-color: transparent;
+    position: absolute;
+    width: 100%;
+    top: 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 48px;
+}
+header > .home_btn {
+    position: relative;
+    z-index: 10;
+}
+header > .home_btn > img{
+    width: 55px;
+    height: 55px;
+}
+
+header .submenu_bg {
+    position: fixed;
+    top: 45px;
+    left: 0;
+    width: 100vw;
+    height: 700px;
+    background-color: darkblue;
+    z-index: 9;
+    cursor: default;
+}
+
+header > .main_menu{
+    display: flex;
+    z-index: 10;
+}
+
+header > .main_menu > li{
+    padding: 4px 12px;
+    cursor: pointer;
+    position: relative;
+}
+
+header > .main_menu > li > a{
+    text-decoration: none;
+    color: white;
+    font-size: var(--font-body-lg-size);
+    font-weight: 500;
+    line-height: var(--font-body-lg-line-height);
+    letter-spacing: var(--font-body-lg-letter-spacing);
+    padding: 4px 0;
+    &:hover{
+        color: hotpink;
+        border-bottom: 2px solid hotpink;
+    }
+    position: relative;
+    z-index: 15;
+}
+
+header .submenu {
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 12px;
+    padding-top: 20px;
+}
+header .submenu li{
+    width: 180px;
+    line-height: 30px;
+    text-align: left;
+    font-size: 18px;
+    color: white;
+}
+header .submenu li > ul{
+    margin-top: 12px;
+}
+header .submenu li a{
+    text-decoration: none;
+    color: inherit;
+    margin-left: 12px;
+    cursor: pointer;
+    &:hover{
+        color: hotpink;
+        border-bottom: 1px solid hotpink;
+    }
+}
+header nav{
+    position: relative;
+    z-index: 10;
+}
+header > nav > ul{
+    display: flex;
+}
+header > nav li{
+    padding: 4px 8px;
+}
+header > nav a{
+    text-decoration: none;
+    color: var(--color-on-primary);
+    font-size: var(--font-body-lg-size);
+    font-weight: var(--font-body-lg-weight);
+    line-height: var(--font-body-lg-line-height);
+    letter-spacing: var(--font-body-lg-letter-spacing);
+    padding: 4px 0;
+}
+
+header .submenu_bg{
+    display: none;
+}
