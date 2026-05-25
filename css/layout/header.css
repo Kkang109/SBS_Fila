@@ -1,5 +1,5 @@
 body{
-    background-color: black;
+    background-color: gray;
 }
 #mainpage{
     position: relative;
@@ -48,28 +48,15 @@ header > .home_btn > img{
     height: 55px;
 }
 
-header .submenu_bg {
-    position: fixed;
-    top: 45px;
-    left: 0;
-    width: 100vw;
-    height: 700px;
-    background-color: darkblue;
-    z-index: 9;
-    cursor: default;
-}
-
 header > .main_menu{
     display: flex;
     z-index: 10;
 }
-
 header > .main_menu > li{
     padding: 4px 12px;
     cursor: pointer;
     position: relative;
 }
-
 header > .main_menu > li > a{
     text-decoration: none;
     color: white;
@@ -85,7 +72,6 @@ header > .main_menu > li > a{
     position: relative;
     z-index: 15;
 }
-
 header .submenu {
     position: absolute;
     top: 120px;
@@ -115,6 +101,9 @@ header .submenu li a{
         border-bottom: 1px solid hotpink;
     }
 }
+header .submenu.kids li{
+    width: 220px;
+}
 header nav{
     position: relative;
     z-index: 10;
@@ -135,6 +124,26 @@ header > nav a{
     padding: 4px 0;
 }
 
+header .submenu_bg {
+    position: fixed;
+    top: 45px;
+    left: 0;
+    width: 100vw;
+    height: 0;
+    background-color: black;
+    z-index: 9;
+    cursor: default;
+}
+
+header .submenu_bg.women{
+    height: 700px;
+}
+header .submenu_bg.men{
+    height: 600px;
+}
+header .submenu_bg.kids{
+    height: 650px;
+}
 header .submenu_bg{
     display: none;
 }
