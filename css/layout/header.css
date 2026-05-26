@@ -41,7 +41,7 @@ header{
 }
 header > .home_btn {
     position: relative;
-    z-index: 10;
+    z-index: 11;
 }
 header > .home_btn > img{
     width: 55px;
