@@ -12,7 +12,7 @@
     font-size: var(--font-label-lg-size);
     font-weight: var(--font-label-lg-weight);
     line-height: 45px;
-    background-color: blue;
+    background-color: hotpink;
     color: white;
     z-index: 99;
 }
@@ -60,7 +60,8 @@ header > .main_menu > li > a{
     padding: 4px 0;
     /* 마우스 올렸을 시 */
     &:hover{
-        border-bottom: 2px solid black;
+        border-bottom: 2px solid hotpink;
+        color: hotpink;
     }
 }
 
@@ -122,6 +123,9 @@ main > #sub_title > div span{
     font-weight: 700;
     line-height: var(--font-body-lg-line-height);
     letter-spacing: var(--font-body-lg-letter-spacing);
+    &:hover{
+        color: black;
+    }
 }
 
 /****************************************************/
@@ -156,6 +160,9 @@ main #list_up{
     background-color: black;
     color: white;
     cursor: pointer;
+    &:hover{
+        background-color: hotpink;
+    }
 }
 #list_up .filter .filter_select{
     position: relative;
@@ -351,4 +358,8 @@ main #list_up .list_card{
 }
 #page .page_btn > a > i{
     font-size: 9px;
+}
+#page .page_list li.active{
+    background-color: black;
+    color: white;
 }
