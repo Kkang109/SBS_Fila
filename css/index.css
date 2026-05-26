@@ -5,15 +5,17 @@
     border: none;
     background-color: white;
     cursor: pointer;
-
     &:hover{
-        background-color: blue;
+        background-color: hotpink;
         color: white;
     }
 }
 /* border 가 있는 형태 */
 .arrow_button.border{
     border: 1px solid black;
+    &:hover{
+        border: none;
+    }
 }
 /* rounded 형태 */
 .arrow_button.rounded{
@@ -44,7 +46,7 @@
     font-size: var(--font-label-lg-size);
     font-weight: var(--font-label-lg-weight);
     line-height: 45px;
-    background-color: blue;
+    background-color: hotpink;
     color: white;
     z-index: 99;
 }
@@ -92,7 +94,8 @@ header > .main_menu > li > a{
     padding: 4px 0;
     /* 마우스 올렸을 시 */
     &:hover{
-        border-bottom: 2px solid var(--color-on-primary)
+        border-bottom: 2px solid hotpink;
+        color: hotpink;
     }
 }
 
@@ -136,13 +139,15 @@ main > .trending_section{
     letter-spacing: var(--font-headline-lg-letter-spacing);
 }
 
-.trending_section > div{
+.trending_section > div:nth-of-type(1) {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
-.trending_section > div > ul{
+.trending_section .keyword_buttons {
     display: flex;
     gap: 16px;
+    list-style: none;
 }
 .trending_section button{
     font-size: var(--font-body-lg-size);
@@ -150,15 +155,32 @@ main > .trending_section{
     background: unset;
     border: none;
     color: var(--color-on-background);
+    cursor: pointer;
+    &:hover{
+        font-weight: 600;
+    }
+}
+.trending_section .keyword_buttons li.active button {
+    font-weight: 600;
+    border-bottom: 2px solid hotpink;
 }
 
-.trending_section > ul{
+.product_lists_container {
+    width: 100%;
+}
+.product_list {
+    display: none;
+    gap: 16px;
+}
+.product_list.active{
     display: flex;
+    flex-wrap: wrap;
 }
-.trending_section > ul > li{
-    width: 400px;
+.product_list > li {
+    flex: 1 1 250px;
+    max-width: 400px;
 }
-.trending_section > ul > li > a{
+.trending_section .product_lists_container a{
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -170,7 +192,7 @@ main > .trending_section{
 }
 
 .trending_section .tag{
-    font-size: var(--font-label-sm-size);
+    font-size: 14px;
     line-height: var(--font-label-sm-line-height);
     color: var(--color-on-background);
     padding: 4px 8px;
@@ -184,7 +206,6 @@ main > .trending_section{
     font-size: var(--font-body-md-size);
     color: var(--color-primary);
 }
-
 
 /***************************************/
 

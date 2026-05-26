@@ -31,10 +31,14 @@ html {
     border: 1px solid black;
     border-radius: 24px;
     background-color: white;
+    color: black;
     padding: 8px 0;
     width: 100%;
     cursor: pointer;
-
+}
+#main .information .accordion .body button.size:hover {
+    background-color: #000;
+    color: #fff;
 }
 /******************************************/
 #main{
@@ -186,8 +190,19 @@ html {
     margin: 8px 0;
 }
 #detail .accordion > .head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 8px 0;
     border-bottom: 1px solid black;
+}
+#detail .accordion:nth-child(2) > summary > a{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    text-decoration: none;
+    color: inherit;
 }
 #detail .accordion > .body{
     display: block;
