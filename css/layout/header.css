@@ -13,7 +13,7 @@ body{
     font-size: var(--font-label-lg-size);
     font-weight: var(--font-label-lg-weight);
     line-height: 45px;
-    background-color: blue;
+    background-color: hotpink;
     color: white;
     z-index: 99;
 }
