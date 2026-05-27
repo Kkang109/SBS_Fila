@@ -68,7 +68,7 @@ header{
     justify-content: space-between;
     align-items: center;
     padding: 20px 48px;
-    z-index: 99;
+    z-index: 98;
 }
 
 header > .home_btn > img{
