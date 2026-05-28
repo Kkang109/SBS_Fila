@@ -35,6 +35,8 @@
 
 #mainpage{
     position: relative;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 
@@ -726,3 +728,188 @@ footer hr{
     display: none;
 }
 
+/********************************/
+
+/* 데스크탑 소형 & 큰 태블릿 */
+@media screen and (max-width: 1024px) {
+
+    .coupon_info_container {
+        font-size: 14px;
+        padding: 0 50px 0 20px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+    .coupon_info_container > button {
+        right: 15px;
+    }
+
+    :root {
+        --main-x-padding: 24px;
+        --main-y-padding: 40px;
+    }
+
+    header {
+        padding: 20px 24px;
+    }
+    header > .main_menu > li > a,
+    header > nav a {
+        font-size: 15px;
+    }
+
+    .product_list.active {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+    }
+    .product_list > li {
+        max-width: 100%;
+    }
+
+    .edit_section {
+        padding: 120px var(--main-x-padding) var(--main-y-padding) var(--main-x-padding);
+    }
+    .edit_section > h2 {
+        font-size: 150px;
+        top: 40px;
+    }
+    .edit_section img.main {
+        width: 350px;
+        height: 450px;
+    }
+    .edit_section img.sub {
+        width: 240px;
+        height: 240px;
+        top: 100px;
+    }
+    .edit_section > .label_container{
+        padding-left: 20px;
+    }
+    .edit_section > .label_container a {
+        font-size: 24px;
+        line-height: 1.5;
+    }
+
+    .information1_section > h2 {
+        font-size: 56px;
+        padding: 0 24px;
+    }
+    .information1_section > div {
+        grid-template-rows: 700px;
+        padding: 0 24px;
+    }
+    .information1_section .information > h3 {
+        font-size: 36px;
+    }
+    .information1_section .information > p {
+        font-size: 22px;
+        line-height: 1.5;
+    }
+
+    .information2_section {
+        padding: 24px var(--main-x-padding) var(--main-y-padding) ;
+        display: flex;
+        width: 100%;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 50vw;
+        min-height: 440px;
+    }
+    .information2_section .info2_text {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        background-color: black;
+        color: var(--color-background);
+        padding: 0 40px;
+        gap: 20px;
+    }
+    .information2_section .info2_text > p {
+        font-size: 20px;
+        line-height: 1.5;
+    }
+    .information2_section > img {
+        flex: 0.5;
+        width: 25% !important;
+        height: 100% !important;
+        object-fit: cover;
+    }
+
+    .information3_section {
+        padding: var(--main-y-padding) var(--main-x-padding);
+    }
+    .information3_section > p {
+        font-size: 18px;
+        margin-bottom: 60px;
+        font-weight: 500;
+    }
+    .information3_section .image_container {
+        display: flex;
+        width: 100%;
+        height: 45vw;
+        min-height: 350px;
+    }
+    .information3_section .image_container img {
+        flex: 1;
+        width: 50%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .information3_section .image_container img:first-child {
+        margin-right: 12px;
+    }
+
+    /* [팝업창] */
+    #popup .popup_container {
+        width: 95vw;
+        max-width: 960px;
+        height: 80vh;
+        max-height: 750px;
+    }
+    #popup .popup_container > img {
+        width: 45%;
+    }
+    #popup .popup_container #pop_i {
+        width: 55%;
+    }
+    #popup .popup_container .popup_info {
+        width: 100%;
+        height: calc(100% - 200px);
+    }
+    #popup .popup_info .infolist {
+        width: 100%;
+    }
+    #pop_i .pop_infobottom .bottomtxt,
+    #pop_i .pop_infobottom .btn-order {
+        width: 100%;
+    }
+}
+
+
+/* 작은 태블릿 */
+@media screen and (max-width: 768px) {
+    :root {
+        --main-x-padding: 16px;
+        --main-y-padding: 32px;
+    }
+
+    .coupon_info_container {
+        font-size: 12px;
+        padding: 0 40px 0 20px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    header {
+        padding: 16px var(--main-x-padding);
+    }
+
+
+
+}
