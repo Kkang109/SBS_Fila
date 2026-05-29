@@ -897,6 +897,21 @@ footer hr{
         --main-y-padding: 32px;
     }
 
+    .arrow_button{
+        padding: 4px;
+        width: 40px;
+        height: 40px;
+        font-size: 12px;
+        text-align: center;
+    }
+    .arrow_button.rounded{
+        border-radius: 50px;
+    }
+    .information4_section >div .arrow_button.rounded{
+        width: 100px;
+        border-radius: 20px;
+    }
+
     .coupon_info_container {
         font-size: 12px;
         padding: 0 40px 0 20px;
@@ -910,6 +925,179 @@ footer hr{
         padding: 16px var(--main-x-padding);
     }
 
+    .product_list.active {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+    .product_list > li {
+        max-width: 100%;
+    }
 
+    .edit_section {
+        padding: 60px var(--main-x-padding) var(--main-y-padding) var(--main-x-padding);
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+    .edit_section > h2 {
+        position: absolute;
+        font-size: 80px;
+        top: 40px;
+    }
+    .edit_section > .image_container{
+        display: flex;
+        width: 100%;
+        height: 45vw;
+        min-height: 350px;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .edit_section img.sub {
+        position: relative;
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+    }
+    .edit_section > .label_container a {
+        font-size: 16px;
+        line-height: 1.5;
+    }
 
+    .information1_section{
+        padding: 16px var(--main-x-padding);
+    }
+    .information1_section > h2 {
+        font-size: 48px;
+    }
+    .information1_section > div {
+        grid-template-rows: 400px;
+        padding: 16px;
+        gap: 12px;
+    }
+    .information1_section .information > h3 {
+        font-size: 24px;
+        margin-bottom: 8px;
+    }
+    .information1_section .information > p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+    .information1_section button{
+        position: absolute;
+        right: 16px;
+        bottom: 16px;
+    }
+
+    .information2_section {
+        padding: 0 var(--main-y-padding) ;
+        display: flex;
+        width: 100%;
+        position: relative;
+        height: 45vw;
+        min-height: 350px;
+    }
+    .information2_section .info2_text {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        background-color: black;
+        color: var(--color-background);
+        padding: 0 24px;
+        gap: 12px;
+    }
+    .information2_section .info2_text > p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+    .information2_section > img {
+        flex: 0.5;
+        width: 25% !important;
+        height: 100% !important;
+        object-fit: cover;
+    }
+
+    .information3_section {
+        padding: var(--main-y-padding);
+    }
+    .information3_section > p {
+        font-size: 18px;
+        margin-bottom: 32px;
+        font-weight: 500;
+    }
+    .information3_section .image_container {
+        display: flex;
+        width: 100%;
+        height: 45vw;
+        min-height: 350px;
+    }
+    .information3_section .image_container img {
+        flex: 1;
+        width: 50%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .information3_section .image_container img:first-child {
+        margin-right: 10px;
+    }
+
+    footer {
+        padding: 16px var(--main-y-padding);
+        font-size: 14px;
+    }
+    footer > div{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 16px;
+    }
+    footer .site_nav{
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        gap: 16px;
+    }
+    .corp_info, .site_info{
+        text-align: left;
+        font-size: 12px;
+    }
+
+    /* [팝업창] */
+    #popup .popup_container {
+        width: 90vw;
+        max-width: 900px;
+        height: 75vh;
+        max-height: 600px;
+    }
+    #popup .popup_container > img {
+        width: 45%;
+    }
+    #popup .popup_container #pop_i {
+        width: 55%;
+        padding: 16px;
+        gap: 12px;
+    }
+    #popup .popup_container .popup_info {
+        width: 100%;
+        height: calc(100% - 200px);
+        padding: 0;
+        font-size: 14px;
+    }
+    #popup .popup_info .infolist {
+        width: 100%;
+    }
+    #pop_i .pop_infobottom .bottomtxt,
+    #pop_i .pop_infobottom .btn-order {
+        width: 100%;0.
+        font-size: 16px;
+    }
+}
+
+/* 모바일 */
+@media screen and (max-width: 480px) {
+    
 }
