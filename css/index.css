@@ -1,46 +1,50 @@
 /* arrow_button의 기본 형태 */
-.arrow_button{
+.arrow_button {
     color: var(--color-primary);
     padding: 4px 32px;
     border: none;
     background-color: white;
     cursor: pointer;
-    &:hover{
+
+    &:hover {
         background-color: hotpink;
         color: white;
     }
 }
+
 /* border 가 있는 형태 */
-.arrow_button.border{
+.arrow_button.border {
     border: 1px solid black;
-    &:hover{
+
+    &:hover {
         border: none;
     }
 }
+
 /* rounded 형태 */
-.arrow_button.rounded{
+.arrow_button.rounded {
     border-radius: 16px;
 }
+
 /* big arrow_button */
-.arrow_button.big{
+.arrow_button.big {
     padding: 12px 40px;
 }
 
-:root{
+:root {
     --main-x-padding: 32px;
     --main-y-padding: 52px;
 }
 
 /*****************************/
-
-#mainpage{
+#mainpage {
     position: relative;
     width: 100%;
     overflow-x: hidden;
 }
 
 
-.coupon_info_container{
+.coupon_info_container {
     position: fixed;
     width: 100%;
     height: 45px;
@@ -52,7 +56,8 @@
     color: white;
     z-index: 99;
 }
-.coupon_info_container > button{
+
+.coupon_info_container > button {
     position: absolute;
     right: 20px;
     line-height: 45px;
@@ -60,8 +65,9 @@
     border: none;
     color: white;
 }
+
 /***********************************************************/
-header{
+header {
     position: absolute;
     width: 100%;
     top: 45px;
@@ -73,21 +79,22 @@ header{
     z-index: 98;
 }
 
-header > .home_btn > img{
+header > .home_btn > img {
     width: 55px;
     height: 55px;
 }
 
-header > .main_menu{
+header > .main_menu {
     display: flex;
 }
 
-header > .main_menu > li{
+header > .main_menu > li {
     padding: 4px 12px;
     cursor: pointer;
     /*background-color: black;*/
 }
-header > .main_menu > li > a{
+
+header > .main_menu > li > a {
     text-decoration: none; /*underline 제거*/
     color: var(--color-on-primary);
     font-size: var(--font-body-lg-size);
@@ -96,21 +103,22 @@ header > .main_menu > li > a{
     letter-spacing: var(--font-body-lg-letter-spacing);
     padding: 4px 0;
     /* 마우스 올렸을 시 */
-    &:hover{
+
+    &:hover {
         border-bottom: 2px solid hotpink;
         color: hotpink;
     }
 }
 
-header > nav > ul{
+header > nav > ul {
     display: flex;
 }
 
-header > nav li{
+header > nav li {
     padding: 4px 8px;
 }
 
-header > nav a{
+header > nav a {
     text-decoration: none; /*underline 제거*/
     color: var(--color-on-primary);
     font-size: var(--font-body-lg-size);
@@ -119,15 +127,16 @@ header > nav a{
     letter-spacing: var(--font-body-lg-letter-spacing);
     padding: 4px 0;
 }
-/****************************************************/
 
-.hero_section{
+/****************************************************/
+.hero_section {
     position: relative;
     width: 100%;
     height: 100vh;
     overflow: hidden;
 }
-.hero_section .carousel{
+
+.hero_section .carousel {
     display: flex;
     flex-wrap: nowrap;
     width: 100%;
@@ -137,20 +146,24 @@ header > nav a{
     list-style: none;
     transition: transform 0.5s ease-in-out;
 }
+
 .hero_section .carousel .heroslide {
     width: 100%;
     height: 100%;
     flex-shrink: 0;
 }
+
 .hero_section .carousel .heroslide video,
 .hero_section .carousel .heroslide img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-.hero_section .carousel .heroslide{
+
+.hero_section .carousel .heroslide {
     position: relative;
 }
+
 .hero_section .hero_btn {
     display: flex;
     position: absolute;
@@ -159,6 +172,7 @@ header > nav a{
     gap: 10px;
     z-index: 80;
 }
+
 .hero_section .hero_btn button {
     background: unset;
     border: solid 2px white;
@@ -169,15 +183,14 @@ header > nav a{
 }
 
 /************************************************/
-
-main > .trending_section{
+main > .trending_section {
     padding: var(--main-y-padding) var(--main-x-padding);
     display: flex;
     flex-direction: column;
     gap: 24px;
 }
 
-.trending_section > h2{
+.trending_section > h2 {
     font-size: var(--font-headline-lg-size);
     font-weight: var(--font-headline-lg-weight);
     line-height: var(--font-headline-lg-line-height);
@@ -189,22 +202,26 @@ main > .trending_section{
     justify-content: space-between;
     align-items: center;
 }
+
 .trending_section .keyword_buttons {
     display: flex;
     gap: 16px;
     list-style: none;
 }
-.trending_section button{
+
+.trending_section button {
     font-size: var(--font-body-lg-size);
     line-height: var(--font-body-lg-line-height);
     background: unset;
     border: none;
     color: var(--color-on-background);
     cursor: pointer;
-    &:hover{
+
+    &:hover {
         font-weight: 600;
     }
 }
+
 .trending_section .keyword_buttons li.active button {
     font-weight: 600;
     border-bottom: 2px solid hotpink;
@@ -213,48 +230,54 @@ main > .trending_section{
 .product_lists_container {
     width: 100%;
 }
+
 .product_list {
     display: none;
     gap: 16px;
 }
-.product_list.active{
+
+.product_list.active {
     display: flex;
     flex-wrap: wrap;
 }
+
 .product_list > li {
     flex: 1 1 250px;
     max-width: 400px;
 }
-.trending_section .product_lists_container a{
+
+.trending_section .product_lists_container a {
     display: flex;
     flex-direction: column;
     gap: 8px;
     text-decoration: none;
     color: var(--color-on-background);
 }
-.trending_section .image_container > img{
+
+.trending_section .image_container > img {
     width: 100%;
 }
 
-.trending_section .tag{
+.trending_section .tag {
     font-size: 14px;
     line-height: var(--font-label-sm-line-height);
     color: var(--color-on-background);
     padding: 4px 8px;
     border-radius: 16px;
 }
-.trending_section .title{
+
+.trending_section .title {
     font-size: var(--font-body-lg-size);
     font-weight: var(--font-body-lg-weight);
 }
-.trending_section .price{
+
+.trending_section .price {
     font-size: var(--font-body-md-size);
     color: var(--color-primary);
 }
 
 /***************************************/
-
-.edit_section{
+.edit_section {
     position: relative;
     display: flex;
     width: 100%;
@@ -262,7 +285,8 @@ main > .trending_section{
     padding: 200px;
     background-color: black;
 }
-.edit_section > h2{
+
+.edit_section > h2 {
     position: absolute;
     top: 80px;
     right: 40px;
@@ -272,71 +296,78 @@ main > .trending_section{
     color: var(--color-background);
 }
 
-.edit_section > .image_container{
+.edit_section > .image_container {
     position: relative;
     flex: 1;
 }
-.edit_section img.main{
+
+.edit_section img.main {
     width: 500px;
     height: 600px;
     object-fit: cover;
 
-    &:hover{
+    &:hover {
         transform: rotate(-5deg);
         transition-duration: 1s;
         transition-timing-function: ease-in-out;
     }
 }
-.edit_section img.sub{
+
+.edit_section img.sub {
     position: absolute;
     top: 150px;
     right: 0;
     width: 350px;
     height: 350px;
     object-fit: cover;
-    &:hover{
+
+    &:hover {
         transform: rotateZ(10deg);
         transition-duration: 1s;
         transition-timing-function: ease-in-out;
     }
 }
-.edit_section img{
+
+.edit_section img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-.edit_section > .label_container{
+
+.edit_section > .label_container {
     display: flex;
     flex: 1;
     align-items: center;
     padding-left: 40px;
 }
-.edit_section > .label_container a{
+
+.edit_section > .label_container a {
     font-size: var(--font-headline-lg-size);
     font-weight: var(--font-body-md-weight);
     text-decoration: none;
     color: var(--color-background);
     margin-right: 20px;
-    &:hover{
+
+    &:hover {
         color: hotpink;
     }
 }
 
 
 /***********************************************/
-
-.information1_section{
+.information1_section {
     padding: var(--main-y-padding) var(--main-x-padding);
 }
 
-.information1_section > div{
+.information1_section > div {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1000px;
     gap: 24px;
     padding: 50px;
 }
-.information1_section > h2{
+
+.information1_section > h2 {
     font-size: 80px;
     font-weight: var(--font-headline-lg-weight);
     line-height: var(--font-headline-lg-line-height);
@@ -347,19 +378,20 @@ main > .trending_section{
     opacity: 0;
     transition: all 1.5s ease;
 }
+
 .information1_section > h2.active {
     transform: translateY(0);
     opacity: 1;
 }
 
-.information1_section a{
+.information1_section a {
     position: relative;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.information1_section .information{
+.information1_section .information {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -367,14 +399,17 @@ main > .trending_section{
     padding: 32px;
     width: 100%;
 }
-.information1_section .information > h3{
+
+.information1_section .information > h3 {
     font-size: 48px;
     margin-bottom: 16px;
 }
-.information1_section .information > p{
+
+.information1_section .information > p {
     font-size: 24px;
 }
-.information1_section button{
+
+.information1_section button {
     position: absolute;
     right: 32px;
     bottom: 32px;
@@ -382,13 +417,13 @@ main > .trending_section{
 }
 
 /***************************************/
-
-.information2_section{
+.information2_section {
     display: flex;
     width: 100%;
     height: 600px;
 }
-.information2_section .info2_text{
+
+.information2_section .info2_text {
     flex: 1;
     display: flex;
     justify-content: space-evenly;
@@ -398,126 +433,143 @@ main > .trending_section{
     color: var(--color-background);
     padding: 0 32px;
 }
-.information2_section .info2_text > p{
+
+.information2_section .info2_text > p {
     font-size: 32px;
     line-height: 1.6;
 }
-.information2_section .info2_image img{
+
+.information2_section .info2_image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
 /************************************************/
-.information3_section{
+.information3_section {
     padding: var(--main-y-padding) var(--main-x-padding);
 }
 
-.information3_section > p{
+.information3_section > p {
     text-align: center;
     font-size: var(--font-headline-md-size);
     margin-bottom: 52px;
 }
-.information3_section .image_container{
+
+.information3_section .image_container {
     display: flex;
 }
-.information3_section .image_container img{
+
+.information3_section .image_container img {
     flex: 1;
     height: 100%;
     object-fit: cover;
 }
-.information3_section .image_container img:first-child{
+
+.information3_section .image_container img:first-child {
     margin-right: 8px;
 }
 
 /*************************************************/
-.information4_section{
+.information4_section {
     padding: 50px;
     background-color: black;
 }
 
-.information4_section > div{
+.information4_section > div {
     display: flex;
     justify-content: space-between;
     margin-bottom: 40px;
 }
-.information4_section  h2{
+
+.information4_section h2 {
     font-size: 48px;
     color: white;
 }
 
-.information4_section button{
+.information4_section button {
     font-size: var(--font-body-lg-size);
     align-self: center;
 }
-.information4_section .slide_wrapper{
+
+.information4_section .slide_wrapper {
     overflow: hidden;
 }
-.information4_section .slide_container{
+
+.information4_section .slide_container {
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scrollbar-width: none;
 }
-.information4_section .slide_container > li{
+
+.information4_section .slide_container > li {
     flex-basis: 480px;
     flex-shrink: 0;
     cursor: pointer;
 }
-.information4_section .slide_container > li:not(:last-child){
+
+.information4_section .slide_container > li:not(:last-child) {
     margin-right: 16px;
 }
-.information4_section .slide_container > li > img{
+
+.information4_section .slide_container > li > img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
 /******************************/
-footer{
+footer {
     background-color: black;
     color: white;
     padding: var(--main-y-padding) var(--main-x-padding);
 }
 
-footer > div{
+footer > div {
     display: flex;
     justify-content: space-between;
 }
-footer .site_nav{
+
+footer .site_nav {
     display: flex;
 }
-footer .site_nav > div{
+
+footer .site_nav > div {
     width: 220px;
 }
-footer .site_nav h4{
+
+footer .site_nav h4 {
     margin-bottom: 8px;
 }
-footer .site_nav ul{
+
+footer .site_nav ul {
     display: flex;
     flex-direction: column;
 }
-footer .site_nav li{
+
+footer .site_nav li {
     margin-bottom: 4px;
 }
-footer .site_nav a{
+
+footer .site_nav a {
     text-decoration: none;
     color: white;
     font-size: 14px;
 }
 
 
-
-footer .sns_nav ul{
+footer .sns_nav ul {
     display: flex;
     margin-bottom: 12px;
 }
-footer .sns_nav li{
+
+footer .sns_nav li {
     margin-right: 12px;
 }
 
-footer .sns_nav a{
+footer .sns_nav a {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -529,39 +581,41 @@ footer .sns_nav a{
     color: black;
 }
 
-footer .me_info{
+footer .me_info {
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
 
-footer .me_info .name{
+footer .me_info .name {
     font-size: 16px;
 }
-footer .me_info .email{
-    font-size: 14px;
-}
-footer .me_info .text{
+
+footer .me_info .email {
     font-size: 14px;
 }
 
-footer hr{
+footer .me_info .text {
+    font-size: 14px;
+}
+
+footer hr {
     margin: 24px 0;
 }
 
-.corp_info{
+.corp_info {
     font-size: 14px;
     line-height: var(--font-body-md-line-height);
 }
-.site_info{
+
+.site_info {
     font-size: 14px;
     line-height: var(--font-body-md-line-height);
     text-align: right;
 }
 
 /*************************************/
-
-#popup{
+#popup {
     width: 100vw;
     height: 100vh;
     top: 0;
@@ -571,14 +625,15 @@ footer hr{
 
 }
 
-#popup .bg{
+#popup .bg {
     position: absolute;
     background-color: rgba(0, 0, 0, 0.5);
     width: 100%;
     height: 100%;
     z-index: 1;
 }
-#popup .popup_container{
+
+#popup .popup_container {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -590,19 +645,19 @@ footer hr{
     background-color: white;
 }
 
-#popup .popup_container > img{
+#popup .popup_container > img {
     width: 600px;
     object-fit: cover;
 }
 
-#popup .popup_container #pop_i{
+#popup .popup_container #pop_i {
     display: flex;
     flex-direction: column;
     width: 600px;
     padding: 32px 0;
 }
 
-#popup .popup_container .pop_infohead{
+#popup .popup_container .pop_infohead {
     width: 100%;
     height: 50px;
     font-size: 16px;
@@ -623,7 +678,8 @@ footer hr{
     overflow-y: scroll;
     padding: 0 32px;
 }
-#popup .popup_info .infolist{
+
+#popup .popup_info .infolist {
     width: 480px;
     display: flex;
     flex-direction: column;
@@ -631,37 +687,45 @@ footer hr{
     padding: 32px 0;
     justify-content: space-around;
 }
-#popup .popup_info .infolist li{
+
+#popup .popup_info .infolist li {
     border-bottom: solid 1px lightgray;
 }
-#popup .popup_info .infolist .itemtxt{
+
+#popup .popup_info .infolist .itemtxt {
     width: 100%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     gap: 12px;
 }
-#popup .popup_info .infolist .itemtxt img{
+
+#popup .popup_info .infolist .itemtxt img {
     width: 70%;
     object-fit: cover;
 }
-#popup .popup_info .infolist .item-details{
+
+#popup .popup_info .infolist .item-details {
     display: flex;
     flex-direction: column;
     gap: 4px;
 }
-#popup .popup_info .infolist .item-details .item-title{
+
+#popup .popup_info .infolist .item-details .item-title {
     font-size: 14px;
     font-weight: 700;
 }
-#popup .popup_info .infolist .item-details .item-options{
+
+#popup .popup_info .infolist .item-details .item-options {
     font-size: 12px;
     font-weight: 500;
 }
-#popup .popup_info .infolist .item-details .item-price{
+
+#popup .popup_info .infolist .item-details .item-price {
     font-size: 16px;
     font-weight: 700;
 }
+
 #popup .popup_info .infolist .size {
     font-size: 16px;
     font-weight: 600;
@@ -677,7 +741,7 @@ footer hr{
     align-items: center;
 }
 
-#pop_i .pop_infobottom{
+#pop_i .pop_infobottom {
     width: 100%;
     padding: 32px;
 
@@ -687,18 +751,20 @@ footer hr{
     align-items: center;
     gap: 50px;
 }
-#pop_i .pop_infobottom .bottomtxt{
+
+#pop_i .pop_infobottom .bottomtxt {
     display: flex;
     width: 500px;
     justify-content: space-between;
     align-items: center;
 }
-#pop_i .pop_infobottom .bottomtxt span{
+
+#pop_i .pop_infobottom .bottomtxt span {
     font-size: 18px;
     font-weight: 600;
 }
 
-#pop_i .pop_infobottom .btn-order{
+#pop_i .pop_infobottom .btn-order {
     width: 500px;
     height: 60px;
     background-color: black;
@@ -712,7 +778,7 @@ footer hr{
 }
 
 
-#popup .btn-close{
+#popup .btn-close {
     position: absolute;
     top: 0;
     right: 16px;
@@ -724,13 +790,10 @@ footer hr{
 }
 
 
-#popup{
+#popup {
     display: none;
 }
 
-/********************************/
-
-/* 데스크탑 소형 & 큰 태블릿 */
 @media screen and (max-width: 1024px) {
 
     .coupon_info_container {
@@ -889,8 +952,6 @@ footer hr{
     }
 }
 
-
-/* 작은 태블릿 */
 @media screen and (max-width: 768px) {
     :root {
         --main-x-padding: 16px;
@@ -908,8 +969,10 @@ footer hr{
         border-radius: 50px;
     }
     .information4_section >div .arrow_button.rounded{
-        width: 100px;
+        width: 80px;
         border-radius: 20px;
+        font-size: 14px;
+        padding: 8px;
     }
 
     .coupon_info_container {
@@ -1045,8 +1108,15 @@ footer hr{
         margin-right: 10px;
     }
 
+    .information4_section h2 {
+        font-size: 48px;
+    }
+    .information4_section .slide_container > li {
+        flex-basis: 200px;
+    }
+
     footer {
-        padding: 16px var(--main-y-padding);
+        padding: 0 var(--main-y-padding);
         font-size: 14px;
     }
     footer > div{
@@ -1092,12 +1162,287 @@ footer hr{
     }
     #pop_i .pop_infobottom .bottomtxt,
     #pop_i .pop_infobottom .btn-order {
-        width: 100%;0.
+        width: 100%;
         font-size: 16px;
     }
 }
 
-/* 모바일 */
 @media screen and (max-width: 480px) {
-    
+
+    .arrow_button {
+        transform: scale(0.8);
+        font-size: 12px;
+        text-align: center;
+    }
+    .arrow_button.rounded {
+        border-radius: 50px;
+    }
+    .information4_section > div .arrow_button.rounded {
+        width: 80px;
+        border-radius: 20px;
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    :root {
+        --main-x-padding: 12px;
+        --main-y-padding: 24px;
+    }
+
+    .coupon_info_container {
+        font-size: 11px;
+        height: 40px;
+    }
+
+    header {
+        top: 40px;
+        padding: 12px var(--main-x-padding);
+    }
+    header > .home_btn > img {
+        width: 40px;
+        height: 40px;
+    }
+    header .main_menu, header nav {
+        display: none;
+    }
+
+    .hero_section {
+        height: 130vw;
+        max-height: 560px;
+    }
+    .hero_section .carousel .heroslide video,
+    .hero_section .carousel .heroslide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .hero_section .hero_btn {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 12px;
+        gap: 8px;
+    }
+    .hero_section .hero_btn button {
+        padding: 8px 16px;
+        height: 32px;
+        font-size: 12px;
+    }
+
+    .trending_section {
+        padding: 24px var(--main-x-padding);
+        gap: 12px;
+    }
+    .trending_section > div {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+    .trending_section > div .arrow_button_container {
+        width: 100%;
+        text-align: right;
+        gap: 4px;
+    }
+    .trending_section .keyword_buttons {
+        gap: 8px;
+        width: 100%;
+    }
+    #mainpage main .trending_section .product_lists_container ul.product_list.active {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 24px 8px !important;
+        padding: 0 8px !important;
+    }
+    #mainpage main .trending_section .product_lists_container ul.product_list.active > li {
+        flex: none !important;
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+    .trending_section button {
+        font-size: 14px;
+    }
+    .trending_section .tag {
+        font-size: 12px;
+        padding: 0;
+    }
+    .trending_section .title {
+        font-size: 14px;
+    }
+    .trending_section .price {
+        font-size: 13px;
+    }
+
+    .edit_section {
+        padding: 32px var(--main-x-padding) var(--main-y-padding) var(--main-x-padding);
+        flex-direction: column;
+        gap: 24px;
+    }
+    .edit_section h2 {
+        position: absolute;
+        font-size: 56px;
+        top: 16px;
+        right: 16px;
+    }
+    .edit_section .image_container {
+        display: flex;
+        width: 100%;
+        height: auto;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .edit_section img.main {
+        width: 48%;
+        height: 300px;
+        position: relative;
+        top: unset;
+        left: unset;
+    }
+    .edit_section img.sub {
+        position: relative;
+        top: unset;
+        right: unset;
+        width: 48%;
+        height: 200px;
+        object-fit: cover;
+    }
+    .edit_section > .label_container {
+        padding-left: 0;
+        justify-content: center;
+        width: 100%;
+    }
+    .edit_section > .label_container a {
+        font-size: 14px;
+        margin-right: 8px;
+    }
+
+    .information1_section > h2 {
+        font-size: 28px;
+    }
+    .information1_section > div {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 400px);
+    }
+    .information1_section .information > h3 {
+        font-size: 22px;
+    }
+
+    .information2_section {
+        padding: 0 var(--main-y-padding);
+        display: flex;
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+    }
+    .information2_section .info2_text {
+        padding: 16px;
+        gap: 12px;
+    }
+    .information2_section .info2_text a {
+        align-self: flex-end;
+    }
+    .information2_section > img {
+        height: 200px;
+    }
+
+    .information3_section > p {
+        font-size: 16px;
+        margin-bottom: 24px;
+    }
+    .information3_section .image_container {
+        flex-direction: column;
+        height: auto;
+        gap: 8px;
+    }
+    .information3_section .image_container img {
+        width: 100%;
+        height: 240px;;
+    }
+    .information3_section .image_container img:first-child {
+        margin-right: 0;
+    }
+
+    .information4_section h2 {
+        font-size: 24px;
+    }
+    .information4_section .slide_container > li {
+        flex-basis: 200px;
+    }
+
+    footer {
+        padding: 0 var(--main-y-padding);
+        font-size: 12px;
+    }
+    footer > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 12px;
+    }
+
+    /* [팝업창] */
+    #popup .popup_container {
+        width: 90vw;
+        height: 70vh;
+        max-width: unset;
+        max-height: unset;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        flex-direction: column;
+        overflow-y: auto;
+        border-radius: 12px;
+    }
+    #popup .popup_container > img {
+        width: 100%;
+        height: 160px;
+        object-fit: cover;
+        flex-shrink: 0;
+    }
+    #popup .popup_container #pop_i {
+        width: 100%;
+        height: calc(100% - 160px);
+        display: flex;
+        flex-direction: column;
+        padding: 16px 12px;
+        gap: 8px;
+        overflow: hidden;
+    }
+    #popup .popup_container #pop_i .infolist{
+        background-color: #f2f8ff;
+    }
+    #pop_i .pop_infobottom {
+        width: 100%;
+        padding: 8px 0 0 0;
+        border-top: 1px solid #eee;
+        gap: 12px;
+        flex-shrink: 0;
+    }
+    #pop_i .pop_infobottom .bottomtxt {
+        width: 100%;
+    }
+    #pop_i .pop_infobottom .bottomtxt span {
+        font-size: 15px;
+    }
+    #pop_i .pop_infobottom .btn-order {
+        width: 100%;
+        height: 44px;
+        font-size: 15px;
+        border-radius: 22px;
+    }
+    #popup .btn-close {
+        top: 4px;
+        right: 4px;
+        padding: 8px;
+        font-size: 20px;
+        color: white;
+        text-shadow: 0 0 4px rgba(0,0,0,0.6);
+        z-index: 10;
+    }
 }

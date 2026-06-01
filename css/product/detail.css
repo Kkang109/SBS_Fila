@@ -770,3 +770,235 @@ main #main {
     border-radius: 5%;
 }
 
+
+/**********************************************/
+
+@media screen and (max-width: 1024px) {
+
+    #main {
+        height: auto;
+        min-height: calc(100vh - 145px);
+        align-items: center;
+    }
+
+    #main > div:first-child {
+        flex: 1.2;
+        height: auto;
+        align-self: center;
+    }
+    #main > div > img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+    }
+    #main > div:last-child {
+        height: auto;
+        padding: 40px 20px;
+    }
+
+    #detail {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 60px 30px;
+        gap: 40px;
+    }
+    #detail .image_container {
+        position: static !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 20px;
+        flex: 1.2 !important;
+        height: auto !important;
+    }
+    #detail .image_container img {
+        width: 100% !important;
+        height: auto !important;
+        aspect-ratio: 1 / 1 !important;
+        object-fit: cover;
+    }
+    #detail .information {
+        position: sticky !important;
+        top: 80px !important;
+        flex: 1 !important;
+        align-self: flex-start;
+        padding: 0 10px !important;
+    }
+    #detail .information > div {
+        margin-top: 50px;
+    }
+    #detail .information >div > p{
+        font-size: 16px;
+        line-height: 1.5rem;
+    }
+    #detail, #detail_more, #review {
+        padding: 0 30px;
+    }
+    .fit_spec_guide .fit_container{
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 16px !important;
+    }
+    #detail .accordion .fit_container > div{
+        padding: 8px;
+        &:not(:last-child){
+            margin-right: 0;
+        }
+    }
+    #detail .accordion .fit_container > div > span{
+        margin: 0;
+        font-size: 14px;
+        padding: 0;
+    }
+
+    #checkpoint > div,
+    #model_cut > div {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    #checkpoint .card,
+    #model_cut .card {
+        flex: 1;
+        min-width: 250px;
+        margin-right: 0 !important;
+    }
+    #checkpoint .card h3{
+        font-size: 20px;
+    }
+    #checkpoint .card p{
+        font-size: 16px;
+        line-height: 1.5rem;
+    }
+    #model_cut h2{
+        font-size: 20px;
+    }
+    #model_cut p{
+        font-size: 16px;
+        line-height: 1.5rem;
+    }
+    #review .photo_video > ul {
+        grid-template-columns: repeat(6, 1fr);
+        gap: 10px;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    main {
+        padding-top: 100px;
+    }
+
+    header {
+        height: auto;
+        gap: 15px;
+        padding: 15px 20px;
+    }
+
+    #main {
+        flex-direction: column;
+        height: auto;
+    }
+    #main > div {
+        width: 100%;
+        height: auto;
+    }
+    #main .information {
+        width: 90%;
+        padding: 0;
+    }
+
+    #detail {
+        flex-direction: column;
+        padding: 0 20px;
+    }
+    #detail .image_container {
+        display: grid !important;
+        position: static;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px;
+        height: auto;
+        width: 100%;
+        padding: 0;
+    }
+    #detail.information {
+        padding: 0;
+        margin-top: 0;
+    }
+
+    /* 핏 가이드 박스 세로로 정렬 */
+    #detail .accordion .fit_container {
+        flex-direction: column;
+        gap: 10px;
+    }
+    #detail .accordion .fit_container > div:not(:last-child) {
+        margin-right: 0;
+    }
+
+    /* 리뷰 점수/그래프 세로 배치 */
+    #review .rating {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+    }
+    #review .average_rating {
+        width: 100%;
+        text-align: left;
+    }
+    #review > button {
+        width: 100%; /* 리뷰 작성 버튼 넓게 */
+    }
+
+    /* 필터 및 검색창 세로 배치 */
+    #review .filter > div {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    #review .filter .search_container {
+        width: 100%;
+        justify-content: space-between;
+        padding: 0;
+    }
+
+    /* 리뷰 리스트: 좌측 유저 / 우측 내용 분할을 상하로 변경 */
+    #review .reviews .item {
+        flex-direction: column;
+        gap: 16px;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    /* 아코디언 내부 사이즈 버튼을 3열에서 -> 2열 그리드로 조정 (터치 영역 확보) */
+    .accordion > .body {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* 상세 이미지 영역을 모바일에서는 1열로 크게 보기 */
+    #detail .image_container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    /* 상품정보 고시 데이터 간격 좁히기 */
+    #detail .accordion > .product_information > div {
+        gap: 15px;
+    }
+    #detail .accordion > .product_information span:first-child {
+        width: 90px;
+    }
+
+    /* 리뷰 포토 썸네일을 4열로 조정 */
+    #review .photo_video > ul {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 8px;
+    }
+
+    /* 드롭다운 버튼들이 화면 밖으로 넘치지 않게 줄바꿈 허용 */
+    #review .dropdown {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+}
