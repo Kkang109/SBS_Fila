@@ -1,0 +1,65 @@
+#cart{
+    width: 100%;
+    min-height: 100vh;
+}
+
+/***********************************************************/
+header{
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 40px;
+}
+
+header > .home_btn > img{
+    width: 55px;
+    height: 55px;
+}
+
+header > .main_menu{
+    display: flex;
+}
+
+header > .main_menu > li{
+    padding: 4px 12px;
+    cursor: pointer;
+}
+header > .main_menu > li > a{
+    text-decoration: none;
+    color: white;
+    font-size: var(--font-body-lg-size);
+    font-weight: 500;
+    line-height: var(--font-body-lg-line-height);
+    letter-spacing: var(--font-body-lg-letter-spacing);
+    padding: 4px 0;
+    /* 마우스 올렸을 시 */
+    &:hover{
+        border-bottom: 2px solid hotpink;
+        color: hotpink;
+    }
+}
+
+header > nav > ul{
+    display: flex;
+}
+
+header > nav li{
+    padding: 4px 8px;
+}
+
+header > nav a{
+    text-decoration: none; /*underline 제거*/
+    color: white;
+    font-size: var(--font-body-lg-size);
+    font-weight: var(--font-body-lg-weight);
+    line-height: var(--font-body-lg-line-height);
+    letter-spacing: var(--font-body-lg-letter-spacing);
+    padding: 4px 0;
+}
+/****************************************************/
+
+#cart main{
+    width: 100%;
+}
